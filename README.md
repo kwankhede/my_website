@@ -1,4 +1,4 @@
-# Kapil's [website](https://kapilwankhede.github.io/)
+# Kapil's [website](https://kapilwankhede.netlify.app/)
 
 Used from the al-folio template mentioned below.
 
