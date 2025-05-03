@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-# Force a compatible ffi version to avoid RubyGems conflict on Netlify
-gem 'ffi', '< 1.17.2'
+# Force older ffi version that is compatible with RubyGems 3.1.4
+gem 'ffi', '< 1.15.5', platforms: [:ruby]
 
 group :jekyll_plugins do
   gem 'classifier-reborn'
