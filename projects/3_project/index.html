@@ -18,10 +18,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
 
-  <!-- Code Syntax Highlighting -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="none" id="highlight_theme_light">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
-
   <!-- Styles -->
   <link rel="icon" href="/assets/img/favicon.ico">
   <link rel="stylesheet" href="/assets/css/main.css">
@@ -29,17 +25,20 @@
 
   <!-- Custom Styling -->
   <style>
-    html { scroll-behavior: smooth; }
-    .navbar-nav .nav-link {
-      padding: 10px;
-      transition: color 0.3s ease-in-out;
-    }
-    .navbar-nav .nav-link:hover {
-      color: #007bff;
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 1rem;
+      padding: 1.5rem;
     }
     .carousel img {
-      max-height: 400px;
+      max-height: 500px;
       object-fit: cover;
+    }
+    .achievement-badge {
+      background: #007bff;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
     }
   </style>
 
@@ -56,21 +55,18 @@
         <a class="navbar-brand title font-weight-lighter" href="/">
           <span class="font-weight-bold">Nalanda</span> Academy
         </a>
-        <button class="navbar-toggler collapsed ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar top-bar"></span>
-          <span class="icon-bar middle-bar"></span>
-          <span class="icon-bar bottom-bar"></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse text-right" id="navbarNav">
-          <ul class="navbar-nav ml-auto flex-nowrap">
-            <li class="nav-item"><a class="nav-link" href="/">about</a></li>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="/">About</a></li>
             <li class="nav-item"><a class="nav-link" href="/CV/">CV</a></li>
-            <li class="nav-item"><a class="nav-link" href="/blog/">blog</a></li>
-            <li class="nav-item"><a class="nav-link" href="/projects/">projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="/projects/">Projects</a></li>
             <li class="nav-item">
               <div class="toggle-container">
-                <a id="light-toggle" aria-label="Toggle theme">
+                <a id="light-toggle" class="nav-link" aria-label="Toggle theme">
                   <i class="fas fa-moon"></i>
                   <i class="fas fa-sun"></i>
                 </a>
@@ -83,65 +79,126 @@
   </header>
 
   <!-- Main Content -->
-  <main class="container mt-5">
-    <section>
-      <h1>Nalanda Academy Overview</h1>
-      <p>Nalanda Academy empowers marginalized students through education...</p>
-    </section>
-
-    <!-- Carousel Images Section -->
-    <section class="text-center mb-4">
-      <h2>Nalanda Academy Images</h2>
-      <div id="nalandaCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="https://raw.githubusercontent.com/kwankhede/my_website/master/assets/img/nalanda.jpg" class="d-block w-100" alt="Nalanda Image 1">
-          </div>
-          <div class="carousel-item">
-            <img src="https://raw.githubusercontent.com/kwankhede/my_website/master/assets/img/nalanda2.jpg" class="d-block w-100" alt="Nalanda Image 2">
-          </div>
-          <div class="carousel-item">
-            <img src="https://raw.githubusercontent.com/kwankhede/my_website/master/assets/img/nalanda3.jpg" class="d-block w-100" alt="Nalanda Image 3">
-          </div>
-          <div class="carousel-item">
-            <img src="https://raw.githubusercontent.com/kwankhede/my_website/master/assets/img/nalanda1.jpg" class="d-block w-100" alt="Nalanda Image 4">
+  <main class="container mt-5 pt-4">
+    <!-- Overview Section -->
+    <section class="mb-5" aria-labelledby="overview-heading">
+      <h1 id="overview-heading" class="display-4 mb-4">Nalanda Academy</h1>
+      <p class="lead">
+        A community-driven initiative empowering marginalized students through quality education since 2013
+      </p>
+      <div class="row">
+        <div class="col-lg-8">
+          <p class="text-muted">
+            Nalanda Academy is a community-driven initiative dedicated to providing high-quality academic support to 
+            marginalized students across India. Starting with 1 educator and 22 students in 2013, we've grown to 
+            support over 18,000 students with 21 educators and 200 mentors.
+          </p>
+          <div class="achievement-badge d-inline-block mb-3">
+            <i class="fas fa-users me-2"></i>15 Indian states reached
           </div>
         </div>
-        <a class="carousel-control-prev" href="#nalandaCarousel" role="button" data-bs-slide="prev">
+      </div>
+    </section>
+
+    <!-- Image Carousel -->
+    <section class="mb-5" aria-labelledby="gallery-heading">
+      <h2 id="gallery-heading" class="visually-hidden">Gallery</h2>
+      <div id="nalandaCarousel" class="carousel slide shadow-lg" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-3">
+          <div class="carousel-item active">
+            <img src="https://raw.githubusercontent.com/kwankhede/my_website/master/assets/img/nalanda.jpg" 
+                 class="d-block w-100" 
+                 alt="Classroom session at Nalanda Academy">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Interactive Learning</h5>
+              <p>Students engaged in classroom discussions at our Wardha campus</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://raw.githubusercontent.com/kwankhede/my_website/master/assets/img/nalanda2.jpg" 
+                 class="d-block w-100" 
+                 alt="Community event">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Community Outreach</h5>
+              <p>Annual cultural festival bringing together students from different states</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://raw.githubusercontent.com/kwankhede/my_website/master/assets/img/nalanda3.jpg" 
+                 class="d-block w-100" 
+                 alt="Library facility">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Learning Resources</h5>
+              <p>One of our 14 Abhiyan Libraries spread across India</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://raw.githubusercontent.com/kwankhede/my_website/master/assets/img/nalanda4.jpg" 
+                 class="d-block w-100" 
+                 alt="Online learning platform">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Digital Initiative</h5>
+              <p>Our online platform serving 12,000+ students nationwide</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#nalandaCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#nalandaCarousel" role="button" data-bs-slide="next">
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#nalandaCarousel" data-bs-slide="next">
           <span class="carousel-control-next-icon"></span>
-        </a>
+        </button>
       </div>
     </section>
 
     <!-- Experience Section -->
-    <section>
-      <h2>Nalanda Academy Contributions</h2>
-      <p>Co-founder and Assistant Director | Jul 2013 - Present</p>
+    <section class="mb-5" aria-labelledby="experience-heading">
+      <h2 id="experience-heading" class="mb-4">Leadership & Impact</h2>
+      <div class="card shadow">
+        <div class="card-body">
+          <h3 class="card-title">
+            <a href="https://nalanda-academy.org/#team" class="text-decoration-none">
+              Co-Founder & Assistant Director
+            </a>
+          </h3>
+          <p class="text-muted mb-4">July 2013 - Present</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <i class="fas fa-rocket me-2 text-primary"></i>
+              Established 14 Abhiyan Libraries across rural India
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-laptop me-2 text-primary"></i>
+              Launched Digital Nalanda platform serving 12,000+ students
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-chalkboard-teacher me-2 text-primary"></i>
+              Developed comprehensive curriculum covering STEM and critical thinking
+            </li>
+            <li class="list-group-item">
+              <i class="fas fa-handshake me-2 text-primary"></i>
+              Built network of 200+ mentors from top global institutions
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
   </main>
 
   <!-- Footer -->
   <footer class="bg-light mt-5 py-3">
     <div class="container text-center">
-      <p>© Copyright 2023 Kapil Wankhede (Nalanda Tech) - Powered by <a href="https://jekyllrb.com/">Jekyll</a></p>
+      <p class="mb-0">
+        © 2023 Kapil Wankhede | Nalanda Tech Initiative 
+        <span class="mx-2">•</span>
+        Powered by <a href="https://jekyllrb.com/" class="text-dark">Jekyll</a> 
+        & <a href="https://github.com/alshedivat/al-folio" class="text-dark">al-folio</a>
+      </p>
     </div>
   </footer>
 
-  <!-- JavaScripts -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" crossorigin="anonymous"></script>
-  <script src="/assets/js/zoom.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/assets/js/common.js"></script>
-
-  <!-- MathJax -->
-  <script type="text/javascript">
-    window.MathJax = {
-      tex: { tags: "ams" }
-    };
-  </script>
 </body>
 </html>
