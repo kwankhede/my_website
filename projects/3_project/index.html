@@ -1,5 +1,3 @@
- <!-- NALANDA -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,6 +27,22 @@
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="canonical" href="https://kapilwankhede.github.io/projects/3_project/">
 
+  <!-- Custom Styling -->
+  <style>
+    html { scroll-behavior: smooth; }
+    .navbar-nav .nav-link {
+      padding: 10px;
+      transition: color 0.3s ease-in-out;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #007bff;
+    }
+    .carousel img {
+      max-height: 400px;
+      object-fit: cover;
+    }
+  </style>
+
   <!-- Theme Scripts -->
   <script src="/assets/js/theme.js"></script>
   <script src="/assets/js/dark_mode.js"></script>
@@ -50,18 +64,10 @@
         </button>
         <div class="collapse navbar-collapse text-right" id="navbarNav">
           <ul class="navbar-nav ml-auto flex-nowrap">
-            <li class="nav-item">
-              <a class="nav-link" href="/">about</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/CV/">CV</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/">blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/projects/">projects</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="/">about</a></li>
+            <li class="nav-item"><a class="nav-link" href="/CV/">CV</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blog/">blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="/projects/">projects</a></li>
             <li class="nav-item">
               <div class="toggle-container">
                 <a id="light-toggle" aria-label="Toggle theme">
@@ -78,72 +84,52 @@
 
   <!-- Main Content -->
   <main class="container mt-5">
-    <section aria-labelledby="nalanda-description">
-      <h1 id="nalanda-description" class="visually-hidden">Nalanda Academy Overview</h1>
-      <p>
-        Nalanda Academy is a community-driven initiative dedicated to providing high-quality academic support to marginalized students across India. With a strong emphasis on inclusion, the academy empowers students from underprivileged backgrounds to achieve their educational goals. Starting in 2013, with only one educator and 22 students, Nalanda Academy has grown to employ over 21 educators and 200 mentors, offering free education to over 18,000 students from 15 different states in India. The organization aims to bridge the gap in educational access and provide resources that enable students to pursue higher education both within India and internationally.
-      </p>
+    <section>
+      <h1>Nalanda Academy Overview</h1>
+      <p>Nalanda Academy empowers marginalized students through education...</p>
     </section>
 
-    <!-- Images Section -->
-    <section class="row text-center mb-4" aria-labelledby="nalanda-images">
-      <h2 id="nalanda-images" class="visually-hidden">Nalanda Academy Images</h2>
-      
-      <div class="col-md-3 mb-3">
-        <img src="https://raw.githubusercontent.com/kwankhede/my_website/master/assets/img/nalanda.jpg" class="img-fluid rounded shadow-sm" alt="Nalanda Image 1">
-      </div>
-      
-      <div class="col-md-3 mb-3">
-        <img src="https://raw.githubusercontent.com/kwankhede/my_website/master/assets/img/nalanda2.jpg" class="img-fluid rounded shadow-sm" alt="Nalanda Image 2">
-      </div>
-      
-      <div class="col-md-3 mb-3">
-        <img src="https://raw.githubusercontent.com/kwankhede/my_website/master/assets/img/nalanda3.jpg" class="img-fluid rounded shadow-sm" alt="Nalanda Image 3">
-      </div>
-      
-      <div class="col-md-3 mb-3">
-        <img src="https://raw.githubusercontent.com/kwankhede/my_website/master/assets/img/nalanda4.jpg" class="img-fluid rounded shadow-sm" alt="Nalanda Image 4">
+    <!-- Carousel Images Section -->
+    <section class="text-center mb-4">
+      <h2>Nalanda Academy Images</h2>
+      <div id="nalandaCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://raw.githubusercontent.com/kwankhede/my_website/master/assets/img/nalanda.jpg" class="d-block w-100" alt="Nalanda Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="https://raw.githubusercontent.com/kwankhede/my_website/master/assets/img/nalanda2.jpg" class="d-block w-100" alt="Nalanda Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="https://raw.githubusercontent.com/kwankhede/my_website/master/assets/img/nalanda3.jpg" class="d-block w-100" alt="Nalanda Image 3">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#nalandaCarousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#nalandaCarousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
       </div>
     </section>
-
 
     <!-- Experience Section -->
-    <section aria-labelledby="nalanda-experience">
-      <h2 id="nalanda-experience" class="visually-hidden">Nalanda Academy Contributions</h2>
-      <div>
-        <h4>
-          <a href="https://nalanda-academy.org/#team">Nalanda Academy Wardha, India</a>
-        </h4>
-        <p>Co-Founder and Assistant Director | Jul 2013 - Present</p>
-        <ul>
-          <li>Co-founded Nalanda Academy to provide education to underprivileged students and empower them with skills and knowledge for future success.</li>
-          <li>Led strategic initiatives aimed at increasing access to education for students from marginalized communities, achieving impactful results in academic and personal growth.</li>
-          <li>Directed efforts to support students through tailored coaching programs that enhance learning in subjects such as Mathematics, Science, Economics, Logical Reasoning, and Critical Thinking.</li>
-          <li>Spearheaded the expansion of the academy's reach through the creation of 14 Abhiyan Libraries across India and managed community mobilization efforts to provide resources to remote areas.</li>
-          <li>Guided the launch of the academy's online learning platform, which is currently used by over 12,000 students: <a href="https://www.digitalnalanda.com" target="_blank" rel="noopener noreferrer">www.digitalnalanda.com</a>.</li>
-        </ul>
-      </div>
+    <section>
+      <h2>Nalanda Academy Contributions</h2>
+      <p>Co-founder and Assistant Director | Jul 2013 - Present</p>
     </section>
   </main>
 
   <!-- Footer -->
   <footer class="bg-light mt-5 py-3">
-    <div class="container">
-      <p class="mb-0 text-center">
-        © Copyright 2023 Kapil Wankhede (Nalanda Tech) - Powered by
-        <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a>
-        with
-        <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a>
-      </p>
+    <div class="container text-center">
+      <p>© Copyright 2023 Kapil Wankhede (Nalanda Tech) - Powered by <a href="https://jekyllrb.com/">Jekyll</a></p>
     </div>
   </footer>
 
   <!-- JavaScripts -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script defer src="/assets/js/masonry.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" crossorigin="anonymous"></script>
   <script src="/assets/js/zoom.js"></script>
   <script src="/assets/js/common.js"></script>
@@ -151,12 +137,8 @@
   <!-- MathJax -->
   <script type="text/javascript">
     window.MathJax = {
-      tex: {
-        tags: "ams"
-      }
+      tex: { tags: "ams" }
     };
   </script>
-  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
-  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 </body>
 </html>
