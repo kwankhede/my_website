@@ -2,26 +2,26 @@
 <html lang="en">
 <head>
   <!-- Metadata -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Nalanda | Kapil Wankhede</title>
-  <meta name="author" content="Kapil Wankhede">
-  <meta name="description" content="All things related to Nalanda Academy">
-  <meta name="keywords" content="nalanda, education, community-driven, marginalized, students, empowerment">
+  <meta name="author" content="Kapil Wankhede" />
+  <meta name="description" content="All things related to Nalanda Academy" />
+  <meta name="keywords" content="nalanda, education, community-driven, marginalized, students, empowerment" />
 
   <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
   <!-- Fonts & Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons" />
 
   <!-- Styles -->
-  <link rel="icon" href="/assets/img/favicon.ico">
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="https://kapilwankhede.github.io/projects/3_project/">
+  <link rel="icon" href="/assets/img/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="canonical" href="https://kapilwankhede.github.io/projects/3_project/" />
 
   <!-- Custom Styling -->
   <style>
@@ -35,10 +35,24 @@
       object-fit: cover;
     }
     .achievement-badge {
-      background: #007bff;
+      background-color: #007bff;
       color: white;
       padding: 0.5rem 1rem;
       border-radius: 2rem;
+      font-weight: 500;
+    }
+    /* Section heading styling for better separation */
+    section > h2, section > h1 {
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    /* Responsive image container for campus construction */
+    .campus-images img {
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 100%;
+      height: auto;
     }
   </style>
 
@@ -50,12 +64,12 @@
 <body class="fixed-top-nav">
   <!-- Header -->
   <header>
-    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top bg-light">
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top bg-light shadow-sm">
       <div class="container">
-        <a class="navbar-brand title font-weight-lighter" href="/">
+        <a class="navbar-brand title font-weight-lighter" href="/" aria-label="Navigate to home page">
           <span class="font-weight-bold">Nalanda</span> Academy
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation menu">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -66,7 +80,7 @@
             <li class="nav-item"><a class="nav-link" href="/projects/">Projects</a></li>
             <li class="nav-item">
               <div class="toggle-container">
-                <a id="light-toggle" class="nav-link" aria-label="Toggle theme">
+                <a id="light-toggle" class="nav-link" href="#" role="button" aria-label="Toggle theme">
                   <i class="fas fa-moon"></i>
                   <i class="fas fa-sun"></i>
                 </a>
@@ -78,7 +92,7 @@
     </nav>
   </header>
 
-   <!-- Main Content -->
+  <!-- Main Content -->
   <main class="container mt-5 pt-4">
     <!-- Overview Section -->
     <section class="mb-5" aria-labelledby="overview-heading">
@@ -89,20 +103,21 @@
       <div class="row">
         <div class="col-lg-8">
           <p class="text-muted">
-            Nalanda Academy is a community-driven initiative dedicated to providing high-quality academic support to 
-            marginalized students across India. Starting with 1 educator and 22 students in 2013, we've grown to 
+            Nalanda Academy is a community-driven initiative dedicated to providing high-quality academic support to
+            marginalized students across India. Starting with 1 educator and 22 students in 2013, we've grown to
             support over 18,000 students with 21 educators and 200 mentors.
           </p>
           <div class="achievement-badge d-inline-block mb-3">
-            <i class="fas fa-users me-2"></i>15 Indian states reached
+            <i class="fas fa-users me-2" aria-hidden="true"></i>15 Indian states reached
           </div>
         </div>
       </div>
     </section>
+
     <!-- Image Carousel -->
     <section class="mb-5" aria-labelledby="gallery-heading">
       <h2 id="gallery-heading" class="visually-hidden">Gallery</h2>
-      <div id="nalandaCarousel" class="carousel slide shadow-lg" data-bs-ride="carousel">
+      <div id="nalandaCarousel" class="carousel slide shadow-lg rounded-3" data-bs-ride="carousel" aria-label="Nalanda Academy image carousel">
         <div class="carousel-inner rounded-3">
           <div class="carousel-item active">
             <img src="https://raw.githubusercontent.com/kwankhede/my_website/master/assets/img/nalanda.jpg" 
@@ -141,72 +156,91 @@
             </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#nalandaCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
+        <button class="carousel-control-prev" type="button" data-bs-target="#nalandaCarousel" data-bs-slide="prev" aria-label="Previous slide">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#nalandaCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
+        <button class="carousel-control-next" type="button" data-bs-target="#nalandaCarousel" data-bs-slide="next" aria-label="Next slide">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </button>
       </div>
     </section>
-    <!-- Experience Section -->
+
+    <!-- Leadership & Impact Section -->
     <section class="mb-5" aria-labelledby="experience-heading">
-      <h2 id="experience-heading" class="mb-4">Leadership & Impact</h2>
-      <div class="card shadow">
+      <h2 id="experience-heading" class="mb-4">Leadership &amp; Impact</h2>
+      <div class="card shadow border-0">
         <div class="card-body">
-          <h3 class="card-title">
-            <a href="https://nalanda-academy.org/#team" class="text-decoration-none">
-              Co-Founder & Assistant Director
+          <h3 class="card-title mb-3">
+            <a href="https://nalanda-academy.org/#team" class="text-decoration-none text-primary" target="_blank" rel="noopener noreferrer">
+              Co-Founder &amp; Assistant Director
             </a>
           </h3>
           <p class="text-muted mb-4">July 2013 - Present</p>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
-              <i class="fas fa-rocket me-2 text-primary"></i>
+              <i class="fas fa-rocket me-2 text-primary" aria-hidden="true"></i>
               Established 14 Abhiyan Libraries across rural India
             </li>
             <li class="list-group-item">
-              <i class="fas fa-laptop me-2 text-primary"></i>
+              <i class="fas fa-laptop me-2 text-primary" aria-hidden="true"></i>
               Launched Digital Nalanda platform serving 12,000+ students
             </li>
             <li class="list-group-item">
-              <i class="fas fa-chalkboard-teacher me-2 text-primary"></i>
+              <i class="fas fa-chalkboard-teacher me-2 text-primary" aria-hidden="true"></i>
               Developed comprehensive curriculum covering STEM and critical thinking
             </li>
             <li class="list-group-item">
-              <i class="fas fa-handshake me-2 text-primary"></i>
+              <i class="fas fa-handshake me-2 text-primary" aria-hidden="true"></i>
               Built network of 200+ mentors from top global institutions
             </li>
           </ul>
         </div>
       </div>
     </section>
+
     <!-- Campus Construction Update Section -->
     <section class="mb-5" aria-labelledby="campus-construction-heading">
       <h2 id="campus-construction-heading" class="mb-4">Nalanda Campus Construction</h2>
-      <div class="card shadow">
+      <div class="card shadow border-0">
         <div class="card-body">
-          <p class="text-muted mb-4">
+          <p class="text-muted mb-4 fs-5">
             Nalanda Academy is excited to announce the ongoing construction of our very own state-of-the-art campus in Wardha, Maharashtra. This dedicated facility aims to provide a vibrant learning environment with modern classrooms, advanced technology labs, community spaces, and extensive library resources to further empower our students.
           </p>
-          <p class="text-muted mb-4">
+          <p class="text-muted mb-4 fs-5">
             As one of the leaders driving this project forward, I am deeply involved in the planning, coordination, and execution phases to ensure this campus meets the highest standards of educational excellence and community engagement. This new campus will significantly enhance our capacity to support thousands of students and mentors.
           </p>
+
+          <!-- Images placed side by side -->
+          <div class="row campus-images g-4 mb-4">
+            <div class="col-md-6">
+              <figure>
+                <img src="/assets/img/academic_bloc.png" alt="Architectural rendering of academic block of Nalanda campus" />
+                <figcaption class="text-center text-muted small mt-2">Architectural rendering of Academic Block</figcaption>
+              </figure>
+            </div>
+            <div class="col-md-6">
+              <figure>
+                <img src="/assets/img/proposed_campus_image.png" alt="Proposed campus site image of Nalanda Academy" />
+                <figcaption class="text-center text-muted small mt-2">Proposed campus site view</figcaption>
+              </figure>
+            </div>
+          </div>
+
           <ul class="list-group list-group-flush mb-3">
             <li class="list-group-item">
-              <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+              <i class="fas fa-map-marker-alt me-2 text-primary" aria-hidden="true"></i>
               Located strategically in Wardha to serve regional and national students.
             </li>
             <li class="list-group-item">
-              <i class="fas fa-hard-hat me-2 text-primary"></i>
+              <i class="fas fa-hard-hat me-2 text-primary" aria-hidden="true"></i>
               Sustainable and eco-friendly construction practices being implemented.
             </li>
             <li class="list-group-item">
-              <i class="fas fa-school me-2 text-primary"></i>
+              <i class="fas fa-school me-2 text-primary" aria-hidden="true"></i>
               Facilities include classrooms, libraries, computer labs, and community halls.
             </li>
             <li class="list-group-item">
-              <i class="fas fa-users me-2 text-primary"></i>
+              <i class="fas fa-users me-2 text-primary" aria-hidden="true"></i>
               Designed to accommodate growing numbers of students and educators.
             </li>
           </ul>
@@ -218,15 +252,14 @@
     </section>
   </main>
 
-
   <!-- Footer -->
   <footer class="bg-light mt-5 py-3">
     <div class="container text-center">
-      <p class="mb-0">
+      <p class="mb-0 small">
         © 2023 Kapil Wankhede | Nalanda Tech Initiative 
         <span class="mx-2">•</span>
-        Powered by <a href="https://jekyllrb.com/" class="text-dark">Jekyll</a> 
-        & <a href="https://github.com/alshedivat/al-folio" class="text-dark">al-folio</a>
+        Powered by <a href="https://jekyllrb.com/" class="text-dark" target="_blank" rel="noopener noreferrer">Jekyll</a>
+        &amp; <a href="https://github.com/alshedivat/al-folio" class="text-dark" target="_blank" rel="noopener noreferrer">al-folio</a>
       </p>
     </div>
   </footer>
